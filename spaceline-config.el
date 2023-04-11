@@ -93,7 +93,7 @@ ADDITIONAL-SEGMENTS are inserted on the right, between `global' and
             buffer-size)
            :face highlight-face
            :priority 100)
-         '((buffer-id remote-host)
+         '((buffer-id-icon remote-host)
            :priority 98)
          additional-segments))
 

@@ -30,6 +30,8 @@
 (require 'spaceline)
 (require 's)
 
+(require 'nerd-icons nil t)
+
 (defvar evil-state)
 (defvar evil-visual-selection)
 
@@ -93,6 +95,14 @@
   (spaceline--string-trim-from-center
    (s-trim (powerline-buffer-id (if active 'mode-line-buffer-id 'mode-line-buffer-id-inactive)))
    spaceline-buffer-id-max-length))
+
+(spaceline-define-segment buffer-id-icon
+  "Name of buffer with Nerd icon."
+  (format "%s %s"
+          (nerd-icons-icon-for-buffer)
+          (spaceline--string-trim-from-center
+           (s-trim (powerline-buffer-id (if active 'mode-line-buffer-id 'mode-line-buffer-id-inactive)))
+           spaceline-buffer-id-max-length)))
 
 (spaceline-define-segment remote-host
   "Hostname for remote buffers."
