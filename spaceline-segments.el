@@ -545,19 +545,6 @@ Requires either `winum-mode' or `window-numbering-mode' to be enabled."
           (spaceline--unicode-number str)
         (propertize str 'face 'bold)))))
 
-(spaceline-define-segment window-number-icon
-  "The current window number with nerd icon.
-Requires either `winum-mode' or `window-numbering-mode' to be enabled."
-  (let* ((num (cond
-               ((bound-and-true-p winum-mode)
-                (winum-get-number))
-               ((bound-and-true-p window-numbering-mode)
-                (window-numbering-get-number))
-               (t nil)))
-         (str (when num (int-to-string num))))
-    (when num
-      (propertize (nerd-icons-mdicon (format "nf-md-numeric_%s_box" str)) 'face 'bold))))
-
 (defvar spaceline-workspace-numbers-unicode nil
   "Set to true to enable unicode display in the `workspace-number' segment.")
 

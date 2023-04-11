@@ -88,7 +88,7 @@ ADDITIONAL-SEGMENTS are inserted on the right, between `global' and
 `buffer-position'."
   (apply 'spaceline--theme
          '(((((persp-name :fallback workspace-number)
-              window-number-icon) :separator "|")
+              window-number) :separator "|")
             buffer-modified
             buffer-size)
            :face highlight-face
