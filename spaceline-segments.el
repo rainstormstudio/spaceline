@@ -160,7 +160,7 @@
              (s-trim (concat vc-mode
                              (when (buffer-file-name)
                                (pcase (vc-state (buffer-file-name))
-                                 (`up-to-date (format " %s" (nerd-icons-faicon "nf-fa-check_circe" :face '(:foreground "#BFDB38"))))
+                                 (`up-to-date (format " %s" (nerd-icons-faicon "nf-fa-check_circle" :face '(:foreground "#BFDB38"))))
                                  (`edited (format " %s" (nerd-icons-octicon "nf-oct-diff_modified" :face '(:foreground "#F7C04A"))))
                                  (`added (format " %s" (nerd-icons-octicon "nf-oct-diff_added" :face '(:foreground "#93C6E7"))))
                                  (`unregistered (format " %s" (nerd-icons-faicon "nf-fa-question_circle" :face '(:foreground "#EA5455"))))
