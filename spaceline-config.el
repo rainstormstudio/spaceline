@@ -39,8 +39,8 @@
                    :priority 9)
       (mu4e-alert-segment :when active)
       (erc-track :when active)
-      (version-control :when active
-                       :priority 78)
+      (version-control-icon :when active
+                            :priority 78)
       (org-pomodoro :when active)
       (org-clock :when active)
       nyan-cat)
